@@ -16,10 +16,14 @@ set(LEXER_BIN_DIR ${BINARY_DIR}/lexer)
 
 set(CMAKE_INSTALL_PREFIX "${CMAKE_HOME_DIRECTORY}/bin")
 
-add_subdirectory(${LEXER_DIR}/src/flex)
+# add_subdirectory(${LEXER_DIR}/src/flex)
+add_subdirectory(${LEXER_DIR})
 
-install(TARGETS lexer
-        RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/lexer)
+# install(TARGETS lexer
+#         RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/lexer)
+
+install(TARGETS main
+        RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX})
 
 add_custom_target(clean-file
     COMMAND ${CMAKE_COMMAND} -E remove -f ${CMAKE_BINARY_DIR}/*

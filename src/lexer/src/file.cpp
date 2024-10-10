@@ -1,6 +1,8 @@
 #include <iostream>
 #include "file.hpp"
 
+static const size_t BUFFER_SIZE = 4096;
+
 FileReader &FileReader::open()
 {
     fileStream.open(filePath);
@@ -19,16 +21,17 @@ FileReader::~FileReader()
     }
 }
 
-std::size_t FileReader::readBuffer(char *buffer, std::size_t bufferSize)
+std::size_t FileReader::writeBuffer(char *buffer, size_t buffer_size)
 {
-    if (bufferSize < 4096)
+    if (buffer_size < 4096)
     {
-        throw std::invalid_argument("Buffer size must be at least 4096 bytes.");
+        throw std::invalid_argument("buffer size must be at least 4096 bytes.");
     }
 
-    fileStream.read(buffer, bufferSize - 1);
-    std::streamsize bytesRead = fileStream.gcount();
+    fileStream.read(buffer, buffer_size - 1);
 
-    buffer[4095] = EOF;
+    buffer[BUFFER_SIZE - 1] = EOF;
+
+    std::streamsize bytesRead = fileStream.gcount();
     return bytesRead;
 }

@@ -3,7 +3,10 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "buffer.hpp"
 #include <sstream>
+
+using my_buffer::Buffer;
 
 class FileReader
 {
@@ -17,6 +20,6 @@ public:
     ~FileReader();
     void close() { fileStream.close(); }
     bool isEndOfFile() const { return fileStream.eof(); }
-    std::size_t readBuffer(char *buffer, std::size_t bufferSize);
+    std::size_t writeBuffer(char *buffer, size_t length);
     FileReader &open();
 };
