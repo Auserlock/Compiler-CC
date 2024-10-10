@@ -16,6 +16,8 @@ namespace Token
         NE,       //!=
         LT,       //<
         GT,       //>
+        INC,
+        DEC,
         CONST_INT,
         CONST_FLOAT,
         CONST_CHAR,
@@ -38,16 +40,16 @@ namespace Token
 
     template <>
     struct TokenStringMap<TokenType::LE, TokenType::GE, TokenType::EQ, TokenType::NE,
-                          TokenType::LT, TokenType::GT, TokenType::CONST_INT,
-                          TokenType::CONST_FLOAT, TokenType::CONST_CHAR,
+                          TokenType::LT, TokenType::GT, TokenType::INC, TokenType::DEC,
+                          TokenType::CONST_INT, TokenType::CONST_FLOAT, TokenType::CONST_CHAR,
                           TokenType::CONST_STRING, TokenType::CONST_ID,
                           TokenType::VOID, TokenType::INT, TokenType::FLOAT,
                           TokenType::CHAR, TokenType::WHILE, TokenType::FOR,
                           TokenType::IF, TokenType::ELSE, TokenType::RETURN,
                           TokenType::BREAK, TokenType::CONTINUE>
     {
-        static constexpr std::array<const char *, 22> strings = {
-            "LE", "GE", "EQ", "NE", "LT", "GT", "CONST_INT",
+        static constexpr std::array<const char *, 24> strings = {
+            "LE", "GE", "EQ", "NE", "LT", "GT", "INC", "DEC", "CONST_INT",
             "CONST_FLOAT", "CONST_CHAR", "CONST_STRING", "CONST_ID",
             "VOID", "INT", "FLOAT", "CHAR", "WHILE", "FOR",
             "IF", "ELSE", "RETURN", "BREAK", "CONTINUE"};
@@ -62,8 +64,8 @@ namespace Token
         else
         {
             return TokenStringMap<TokenType::LE, TokenType::GE, TokenType::EQ, TokenType::NE,
-                                  TokenType::LT, TokenType::GT, TokenType::CONST_INT,
-                                  TokenType::CONST_FLOAT, TokenType::CONST_CHAR,
+                                  TokenType::LT, TokenType::GT, TokenType::INC, TokenType::DEC,
+                                  TokenType::CONST_INT, TokenType::CONST_FLOAT, TokenType::CONST_CHAR,
                                   TokenType::CONST_STRING, TokenType::CONST_ID,
                                   TokenType::VOID, TokenType::INT, TokenType::FLOAT,
                                   TokenType::CHAR, TokenType::WHILE, TokenType::FOR,

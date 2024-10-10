@@ -35,6 +35,8 @@ MULTI_COMMENT       (\/\*.*?\*\/)
 "!="                { return Token::TokenType::NE;              }
 "<"                 { return Token::TokenType::LT;              }
 ">"                 { return Token::TokenType::GT;              }
+"++"                { return Token::TokenType::INC;              }
+"--"                { return Token::TokenType::DEC;              }
 "void"              { return Token::TokenType::VOID;            }
 "int"               { return Token::TokenType::INT;             }
 "float"             { return Token::TokenType::FLOAT;           }
