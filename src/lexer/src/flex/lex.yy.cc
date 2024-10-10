@@ -1,6 +1,6 @@
-#line 1 "../src/lexer/lex.yy.cc"
+#line 1 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.yy.cc"
 
-#line 3 "../src/lexer/lex.yy.cc"
+#line 3 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.yy.cc"
 
 #define  YY_INT_ALIGNED short int
 
@@ -450,9 +450,9 @@ static const flex_int16_t yy_chk[145] =
 #define yymore() yymore_used_but_not_detected
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
-#line 1 "../src/lexer/lex.l"
-#line 2 "../src/lexer/lex.l"
-#include "token.hpp"
+#line 1 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
+#line 2 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
+#include <token.hpp>
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -460,9 +460,9 @@ using std::string;
 using namespace Token;
 static int cur_line_num = 1;
 void init_scanner();
-#line 463 "../src/lexer/lex.yy.cc"
+#line 463 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.yy.cc"
 /* Definitions, Note: \042 is '"' */
-#line 465 "../src/lexer/lex.yy.cc"
+#line 465 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.yy.cc"
 
 #define INITIAL 0
 
@@ -594,10 +594,10 @@ YY_DECL
 		}
 
 	{
-#line 23 "../src/lexer/lex.l"
+#line 23 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 
 
-#line 600 "../src/lexer/lex.yy.cc"
+#line 600 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.yy.cc"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -657,169 +657,169 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 25 "../src/lexer/lex.l"
+#line 25 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { cur_line_num++;                       }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 26 "../src/lexer/lex.l"
+#line 26 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { /* ignore all spaces */               }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 27 "../src/lexer/lex.l"
+#line 27 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { /* skip for single line comment */    }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 28 "../src/lexer/lex.l"
+#line 28 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { /* skip for multi comment */          }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 30 "../src/lexer/lex.l"
+#line 30 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return YYText()[0];         }   
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 32 "../src/lexer/lex.l"
+#line 32 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::LE;              }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 33 "../src/lexer/lex.l"
+#line 33 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::GE;              }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 34 "../src/lexer/lex.l"
+#line 34 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::EQ;              }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 35 "../src/lexer/lex.l"
+#line 35 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::NE;              }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 36 "../src/lexer/lex.l"
+#line 36 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::LT;              }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 37 "../src/lexer/lex.l"
+#line 37 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::GT;              }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 38 "../src/lexer/lex.l"
+#line 38 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::INC;              }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 39 "../src/lexer/lex.l"
+#line 39 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::DEC;              }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 40 "../src/lexer/lex.l"
+#line 40 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::VOID;            }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 41 "../src/lexer/lex.l"
+#line 41 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::INT;             }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 42 "../src/lexer/lex.l"
+#line 42 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::FLOAT;           }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 43 "../src/lexer/lex.l"
+#line 43 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::CHAR;            }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 44 "../src/lexer/lex.l"
+#line 44 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::WHILE;           }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 45 "../src/lexer/lex.l"
+#line 45 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::IF;              }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 46 "../src/lexer/lex.l"
+#line 46 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::ELSE;            }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 47 "../src/lexer/lex.l"
+#line 47 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::FOR;             }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 48 "../src/lexer/lex.l"
+#line 48 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::RETURN;          }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 49 "../src/lexer/lex.l"
+#line 49 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::BREAK;           }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 50 "../src/lexer/lex.l"
+#line 50 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::CONTINUE;        }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 52 "../src/lexer/lex.l"
+#line 52 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::CONST_INT;     }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 53 "../src/lexer/lex.l"
+#line 53 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::CONST_FLOAT;   }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 54 "../src/lexer/lex.l"
+#line 54 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::CONST_CHAR; }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 55 "../src/lexer/lex.l"
+#line 55 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::CONST_STRING; }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 56 "../src/lexer/lex.l"
+#line 56 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return Token::TokenType::CONST_ID;      }
 	YY_BREAK
 case YY_STATE_EOF(INITIAL):
-#line 58 "../src/lexer/lex.l"
+#line 58 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { return 0; }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 60 "../src/lexer/lex.l"
+#line 60 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { std::cout << "Line Number " << cur_line_num << ": Unterminated string constant: \n" << YYText() << std::endl; }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 61 "../src/lexer/lex.l"
+#line 61 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 { std::cout << "Line Number " << cur_line_num << ": Unrecognized character: " << YYText() << std::endl; }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 63 "../src/lexer/lex.l"
+#line 63 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 ECHO;
 	YY_BREAK
-#line 822 "../src/lexer/lex.yy.cc"
+#line 822 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.yy.cc"
 
 	case YY_END_OF_BUFFER:
 		{
@@ -1780,7 +1780,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 63 "../src/lexer/lex.l"
+#line 63 "/home/arch_/Work/Compiler-CC/src/lexer/src/flex/lex.l"
 
 
 int main(int argc, char* argv[]) {
