@@ -23,7 +23,7 @@ add_subdirectory(${LEXER_DIR})
 #         RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/lexer)
 
 install(TARGETS main
-        RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX})
+        RUNTIME DESTINATION ${LEXER_DIR}/src)
 
 add_custom_target(clean-file
     COMMAND ${CMAKE_COMMAND} -E remove -f ${CMAKE_BINARY_DIR}/*

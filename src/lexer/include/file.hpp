@@ -3,10 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "buffer.hpp"
 #include <sstream>
-
-using my_buffer::Buffer;
 
 class FileReader
 {
