@@ -27,7 +27,7 @@ MULTI_COMMENT       (\/\*.*?\*\/)
 {SINGLE_COMMENT}    { /* skip for single line comment */    }
 {MULTI_COMMENT}     { /* skip for multi comment */          }
 
-{OPERATOR}          { return yytext[0];         }   
+{OPERATOR}          { return YYText()[0];         }   
 
 "<="                { return Token::TokenType::LE;              }
 ">="                { return Token::TokenType::GE;              }
@@ -57,18 +57,20 @@ MULTI_COMMENT       (\/\*.*?\*\/)
 
 <<EOF>>             { return 0; }
 
-{UNTERM_STRING}     { std::cout << "Line Number " << cur_line_num << ": Unterminated string constant: \n" << yytext << std::endl; }
-.                   { std::cout << "Line Number " << cur_line_num << ": Unrecognized character: " << yytext << std::endl; }
+{UNTERM_STRING}     { std::cout << "Line Number " << cur_line_num << ": Unterminated string constant: \n" << YYText() << std::endl; }
+.                   { std::cout << "Line Number " << cur_line_num << ": Unrecognized character: " << YYText() << std::endl; }
 
 %%
 
 int main(int argc, char* argv[]) {
     int token;
     init_scanner();
-    while ((token = yylex())) {
-         print_token(static_cast<Token::TokenType>(token)); 
-        std::cout << yytext << std::endl;
+    FlexLexer* lexer = new yyFlexLexer;
+    while ((token = lexer->yylex())) {
+        print_token(static_cast<Token::TokenType>(token)); 
+        std::cout << lexer->YYText() << std::endl;
     }
+    delete lexer;
     return 0;
 }
 
@@ -77,6 +79,6 @@ void init_scanner() {
     std::cout << "-------------------------------" << std::endl;
 }
 
-int yywrap() {
+int yyFlexLexer::yywrap() {
     return 1;
 }

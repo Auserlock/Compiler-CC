@@ -59,7 +59,7 @@ namespace Token
     {
         if (static_cast<int>(token) < 256)
         {
-            return nullptr; // 不支持的类型
+            return nullptr;
         }
         else
         {
